@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Buscador de animes</title>
+</head>
+<body>
+    <main>
+
+        <input v-model="buscador" placeholder="Ingrese otro anime" type="text">
+        <button @click="buscarAnime">Nuevo anime</button>
+
+        <ul>
+            <li v-for="anime in animes">{{anime}}</li>
+        </ul>
+        <pre>{{ $data }}</pre>
+
+    </main>
+
+    <script src="js/vue.min.js"></script>
+    <script src="js/buscador.js"></script>
+    
+</body>
+</html>

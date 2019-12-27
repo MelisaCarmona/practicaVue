@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sistema de consulta</title>
+    <!--link de estilos bootstrap-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!--estilos de iconos-->
+    <link rel="stylesheet" href="css/all.css">
+</head>
+<body>
+  <style>
+    .lista{
+      padding:10px;
+      border:1px solid #000;
+      width:600px;
+      margin:20px;
+    }
+
+    .lista li{
+       list-style: none;     
+    }
+
+  </style>
+    <main>
+        <nav class="navbar navbar-light bg-light" >
+            <form v-on:submit.prevent="buscarProducto" class="form-inline">
+              <input class="form-control mr-sm-2"  v-model="busqueda" type="search" placeholder="Buscar producto" aria-label="Search">
+              <input class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Buscar">
+            </form>
+          </nav>
+
+          
+          
+          <producto class="lista" :lista="listaProductos" :busqueda="busqueda"></producto>
+        <!--<ul>
+          <li>{{listaProductos.t120.f120_referencia}}, {{listaProductos.t120.f120_id}}, {{listaProductos.t120.f120_descripcion}}, {{listaProductos.t120.f120_id}} </li>
+        </ul>  -->       
+        <pre>{{ $data }}</pre>
+
+    </main>
+    
+    <!--link javascript de vue-->
+    <script src="js/vue.min.js"></script>
+    <script src="js/axios.min.js"></script>
+    <script src="js/index.js"></script>
+
+    <!--link javascript de bootstrap-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/all.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Componentes</title>
+</head>
+<body>
+    <main>
+        <!--<ul>
+            <li v-for="tarea in tareasAjax" v-text="tarea.title"></li>
+        </ul>-->
+        <h1>Tareas en Ajax</h1>
+        <mis-tareas :tareas="tareasAjax"></mis-tareas>
+        <br>
+        <hr>
+        <h1>Tareitas Locales</h1>
+        <mis-tareas :tareas="tareasLocales"></mis-tareas>
+        <pre>{{ $data }}</pre>
+    </main>
+    <script src="js/vue.min.js"></script>
+    <script src="js/axios.min.js"></script>
+    <script src="js/componentes.js"></script>
+    
+</body>
+</html>

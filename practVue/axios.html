@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ajax con axios</title>
+</head>
+<body>
+
+<main>
+    <img v-for="persona in personas" 
+        :src="persona.picture.thumbnail" 
+        :alt="persona.name.first">
+    <pre> {{ $data }} </pre>
+</main>
+
+<script src="js/vue.min.js"></script>
+<script src="js/axios.min.js"></script>
+<script src="js/axios.js"></script>  
+</body>
+</html>

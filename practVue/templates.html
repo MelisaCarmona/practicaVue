@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Componentes-Templates</title>
+
+</head>
+<body>
+    <main>
+        <elegir-ganador :listado="personas" inline-template>
+            <div>
+                <h1 v-if="ganador">El ganador es: {{ ganador }}</h1>
+                <template v-else>
+                    <h1>Participantes</h1>
+                    <ul>
+                        <li v-for="persona in listado">{{ persona }}</li v-for="persona in listado">
+                    </ul>
+                </template>
+                <button @click="elegirGanador">Elegir ganador</button>
+            </div>
+
+        </elegir-ganador>
+        <pre>{{ $data }}</pre>
+    </main>
+<script src="js/vue.min.js"></script>
+<script src="js/template.js"></script>    
+</body>
+
+</html>
